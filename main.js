@@ -1,13 +1,23 @@
 
 const angryWords = [
     "b****", "oh s***", "s***",
-    "f***", "f*** you", "f*** off",
+    "f***", "f*** you", "f*** off", "what the f***", "shut the f*** off", "shut the f***", "shut the fuk",
     "a******",
     "I am mad",
     "I'm mad",
     "frustrated",
     "shut up",
     "I hate you",
+    "I've got a bone to pick with you",
+    "are you kidding me", "are you kidding",
+    "don't make me laugh",
+    "you're drop dead",
+    "end of story",
+    "I'll kill him", "I will kill him", "I will kill her", "I will kill them", "i will kill you",
+    "it makes me want to puke", "You make me want to puke",
+    "that's it", 
+    "watch your mouth"
+
 
 ];
 const yogaVideos = [
@@ -25,6 +35,12 @@ const relaxSongs = [
     "https://www.youtube.com/watch?v=_nj-LnZqY-0",  //Interstellar - Main Theme - Hans Zimmer
     "https://www.youtube.com/watch?v=VHg_BG_-Ah4", //3 original pieces | Emotions \\ Jacob's Piano \\ Relaxing Piano
     "https://www.youtube.com/watch?v=EaUQbQ2PL-4", //1 HOUR RELAXING PIANO \\ Studying and Relaxation \\ Jacob's Piano
+    "https://www.youtube.com/watch?v=t_Kd_G7p6ZQ",//4 Beautiful Soundtracks | Relaxing Piano [10min]
+    "https://www.youtube.com/watch?v=5lP_anjF6rA", //To Zanarkand-FFX OST
+    "https://www.youtube.com/watch?v=gx-BL-93V-s&t=2201s", //Late Night Melody
+    "https://www.youtube.com/watch?v=WyjeWEYYp8k", //Standing Before the Storm 
+    "https://www.youtube.com/watch?v=sIaT8Jl2zpI", //You Say
+
 
 ]
 
@@ -50,11 +66,10 @@ var paragraph = document.getElementById("paragraph");
     const text = Array.from(e.results).map(result => result[0]).map(result => result.transcript).join('');
 
     console.log(text);
-    // angryWords.includes(text) &&
     if(e.results[0].isFinal && ( angryWords.includes(text))){
-        // alert('Please relax yourself!')
         recognition.continuous = false;
-        alert("Please Take It Easy ✋. Take A Moment To Relax")
+        count++;
+        alert("Please Take It Easy ✋. Take A Moment To Relax. \nYou have been upset for " + count + " time(s).")
         alert("Take A Deep Deep Breath. Breath In. Breath Out. 😮‍💨")
         var journal = prompt("Write Down What Made You Upset ✍️ ")
         
